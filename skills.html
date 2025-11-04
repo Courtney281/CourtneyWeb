@@ -1,47 +1,62 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Skills — Portfolio</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skills — Courtney Arnold-Harrison</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="assets/scripts.js"></script>
 </head>
 <body>
-  <div class="container">
-    <header class="header">
-      <div class="brand"><h2>Skills & Qualifications</h2></div>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="skills.html">Skills</a>
-        <a href="showcase.html">Showcase</a>
-        <a href="problem-solving.html">Problem-Solving</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
+  <header class="site-header">
+    <a class="logo" href="index.html">Courtney A-H</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="skills.html">Skills</a>
+      <a href="showcase.html">Showcase</a>
+      <a href="problem-solving.html">Problem-Solving</a>
+      <a href="contact.html" class="cta">Contact</a>
+    </nav>
+  </header>
 
-    <main class="card">
-      <h3>Certificates & Diplomas</h3>
-      <table class="table" aria-describedby="certs-desc">
-        <caption id="certs-desc" style="caption-side:top;text-align:left;font-weight:700;margin-bottom:8px">Relevant qualifications</caption>
-        <thead>
-          <tr><th>Year</th><th>Qualification</th><th>Institution</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>2023</td><td>Diploma in Web Development</td><td>Local College</td></tr>
-          <tr><td>2022</td><td>UX Fundamentals Certificate</td><td>Online Academy</td></tr>
-          <tr><td>2021</td><td>Food Safety Level 2</td><td>City Training</td></tr>
-        </tbody>
-      </table>
+  <main class="container">
+    <h1>Skills & Qualifications</h1>
 
-      <h3 style="margin-top:16px">Work experience</h3>
-      <ul>
-        <li><strong>CTO — Local Restaurant (2024–present)</strong>: Leading digital transformation initiatives, responsible for web presence and booking tools.</li>
-        <li><strong>Front-end Developer — Web Agency (2019–2023)</strong>: Built websites and internal tools for SME clients.</li>
-      </ul>
-    </main>
+    <section class="skills-grid">
+      <div class="card">
+        <h3>Technical Skills</h3>
+        <ul>
+          <li>Data analysis (Excel, Power BI basics)</li>
+          <li>Admin systems: SAP, Athena, DUFRY</li>
+          <li>Basic coding: HTML, CSS, JavaScript (hand-coded)</li>
+          <li>IT equipment setup & troubleshooting</li>
+        </ul>
+      </div>
 
-    <footer class="footer">Attach scanned certificates in the repo under /assets/images and link here if required.</footer>
-  </div>
-  <script src="js/main.js"></script>
+      <div class="card">
+        <h3>Qualifications</h3>
+        <table class="qual-table">
+          <tr><th>Qualification</th><th>Result</th></tr>
+          <tr><td>BSc Business Management (in progress)</td><td>University of Salford</td></tr>
+          <tr><td>T-Level Digital Business Studies</td><td>Merit</td></tr>
+          <tr><td>Level 2 Computer Science & Tech</td><td>Double Distinction</td></tr>
+        </table>
+      </div>
+
+      <div class="card">
+        <h3>Experience Highlights</h3>
+        <ol>
+          <li>Admin Assistant — World Duty Free (SAP inventory & reporting). :contentReference[oaicite:2]{index=2}</li>
+          <li>Admin Intern — Age UK Stockport (interactive Annual Figures Dashboard). :contentReference[oaicite:3]{index=3}</li>
+          <li>3D Campus Safety Project Lead — virtual walkthrough & editing. :contentReference[oaicite:4]{index=4}</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year-3"></span> Courtney Arnold-Harrison</p>
+  </footer>
 </body>
 </html>
+
