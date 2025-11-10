@@ -1,91 +1,46 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Courtney Arnold-Harrison — Portfolio</title>
-  <link rel="stylesheet" href="assets/styles.css">
-  <script defer src="assets/scripts.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="logo" href="index.html">Courtney A-H</a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="skills.html">Skills</a>
-      <a href="showcase.html">Showcase</a>
-      <a href="problem-solving.html">Problem-Solving</a>
-      <a href="contact.html" class="cta">Contact</a>
-    </nav>
-  </header>
-
-  <main class="container">
-    <section class="hero">
-      <div class="hero-left">
-        <h1>Hi — I’m Courtney Arnold-Harrison</h1>
-        <p class="tagline">Business Management with Innovation & Technology student focused on web development, digital transformation and data-driven solutions.</p>
-        <p>
-          Motivated, hands-on and resilient — I bring administrative experience, dashboard & data work, and a practical approach to delivering digital services.
-          Current role: Admin Assistant (World Duty Free) — bringing practical SAP & reporting experience to business tech problems. See my CV details throughout the site. :contentReference[oaicite:1]{index=1}
-        </p>
-
-        <div class="buttons">
-          <a class="btn primary" href="showcase.html">View Projects</a>
-          <a class="btn ghost" href="problem-solving.html">See Problem-Solving Demo</a>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <img src="https://p7.hiclipart.com/preview/132/775/609/university-of-salford-pendleton-greater-manchester-student-master-s-degree-student.jpg" alt="Courtney Arnold-Harrison headshot" class="headshot">
+        <div class="hero-text">
+          <h1>Courtney Arnold-Harrison</h1>
+          <p class="subtitle">Second year student at the University of Salford, currently studying Business Management with Innovation and Technology</p>
+          <p class="about-me">Hi! I am an aspiring Data Analyst and this website is going to show you an insight into the technical and workplace skills I have gained so far amongst my career and educational journey.</p>
+          <div class="buttons">
+            <a href="showcase.html" class="btn btn-primary">View My Projects</a>
+            <a href="skills.html" class="btn btn-secondary">View My Skills</a>
+            <a href="contact.html" class="btn btn-tertiary">Contact Me</a>
+          </div>
         </div>
       </div>
-
-      <div class="hero-right">
-        <!-- Decorative GIF -->
-        <img alt="animated coding gif" src="ADD PIC LINK" class="hero-gif">
+      <div class="theme-toggle">
+        <input type="checkbox" id="toggle-mode">
+        <label for="toggle-mode" class="toggle-label">
+          <span class="sun">☀️</span>
+          <span class="moon">🌙</span>
+          <span class="ball"></span>
+        </label>
       </div>
-    </section>
+    </header>
 
-    <section class="quick-info">
-      <article>
-        <h3>Location</h3>
-        <p>Manchester, UK</p>
-      </article>
-      <article>
-        <h3>Contact</h3>
-        <p>Email: <a href="mailto:Cnah202@gmail.com">Cnah202@gmail.com</a></p>
-      </article>
-      <article>
-        <h3>Current study</h3>
-        <p>BSc Business Management with Innovation & Technology — University of Salford.</p>
-      </article>
-    </section>
-  </main>
+    <footer class="footer">
+      Please note this portfolio was written in 2025 during second year of university and experiences/work experience/qualifications may need updating since then.
+    </footer>
 
-  <footer class="site-footer">
-    <p>© <span id="year"></span> Courtney Arnold-Harrison — Portfolio</p>
-  </footer>
-  <script>
-  const toggle = document.getElementById('themeToggle');
-  const body = document.body;
-
-  // Initialize from saved preference
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'light') {
-    body.classList.add('light-mode');
-    toggle.setAttribute('aria-checked', 'true');
-  }
-
-  // Toggle theme
-  toggle.addEventListener('click', () => {
-    const isLight = body.classList.toggle('light-mode');
-    localStorage.setItem('theme', isLight ? 'light' : 'dark');
-    toggle.setAttribute('aria-checked', isLight);
-  });
-
-  // Keyboard accessible
-  toggle.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      toggle.click();
-    }
-  });
-</script>
-
+    <!-- Floating GIF as decorative footnote -->
+    <div class="floating-footnote float">
+      <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyOGRqd2Y1bDU4ZTNyOWV1NHZ1bjd0emlpbGE3bzl0bmpnNnk2ZDJxZCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/hmSXoiieHQX6Ix0AdW/giphy.gif" alt="Floating decorative gif">
+    </div>
+  </div>
+  <script src="js/main.js"></script>
 </body>
 </html>
