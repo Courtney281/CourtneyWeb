@@ -60,5 +60,32 @@
   <footer class="site-footer">
     <p>© <span id="year"></span> Courtney Arnold-Harrison — Portfolio</p>
   </footer>
+  <script>
+  const toggle = document.getElementById('themeToggle');
+  const body = document.body;
+
+  // Initialize from saved preference
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    body.classList.add('light-mode');
+    toggle.setAttribute('aria-checked', 'true');
+  }
+
+  // Toggle theme
+  toggle.addEventListener('click', () => {
+    const isLight = body.classList.toggle('light-mode');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    toggle.setAttribute('aria-checked', isLight);
+  });
+
+  // Keyboard accessible
+  toggle.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggle.click();
+    }
+  });
+</script>
+
 </body>
 </html>
