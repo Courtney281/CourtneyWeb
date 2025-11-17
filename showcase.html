@@ -1,52 +1,48 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Projects Showcase — Courtney</title>
-  <link rel="stylesheet" href="assets/styles.css">
-  <script defer src="assets/scripts.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <script defer src="assets/script.js"></script>
+    <title>Projects – Courtney Arnold-Harrison</title>
 </head>
 <body>
-  <header class="site-header">
-    <a class="logo" href="index.html">Courtney A-H</a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="skills.html">Skills</a>
-      <a href="showcase.html">Showcase</a>
-      <a href="problem-solving.html">Problem-Solving</a>
-      <a href="contact.html" class="cta">Contact</a>
-    </nav>
-  </header>
+    <header class="header">
+        <h1 class="page-title">Project Showcase</h1>
+        <button id="theme-toggle" class="theme-toggle">☾</button>
+    </header>
 
-  <main class="container">
-    <h1>Business Showcase</h1>
+    <main class="projects-container">
+        <section class="project-grid">
 
-    <section class="project">
-      <h2>1. Annual Figures Dashboard — Age UK Stockport</h2>
-      <p><strong>Role:</strong> Data analysis & dashboard developer.</p>
-      <p><strong>Problem:</strong> Manual static reports were not supporting dynamic decision making.</p>
-      <p><strong>Solution & Outcome:</strong> Built an interactive dashboard (Excel / Power BI prototype) showing live KPIs which improved forecasting and donor reporting. Resulted in faster decisions and clearer board reporting. :contentReference[oaicite:5]{index=5}</p>
-    </section>
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="assets/images/project1.gif" alt="Project 1 visual" class="project-img" />
+                <h2 class="project-title">Business Data Insights Dashboard</h2>
+                <p class="project-desc">
+                    This project involved creating an interactive data dashboard to explore key business performance metrics. The goal was to transform raw data into a clear, visual narrative that could support decision-making in a business environment. I focused on structuring datasets, identifying meaningful trends, and designing visual outputs that were both accessible and insightful.
+                </p>
+                <button class="project-btn">View Project</button>
+            </div>
 
-    <section class="project">
-      <h2>2. 3D Campus Safety Walkthrough — University of Manchester</h2>
-      <p><strong>Role:</strong> Project lead (team coordination, footage editing).</p>
-      <p><strong>Problem:</strong> Students needed a clear visual guide for fire exits and safety routes.</p>
-      <p><strong>Solution & Outcome:</strong> Delivered a 3D virtual walkthrough in two weeks; used for on-boarding and safety briefings. :contentReference[oaicite:6]{index=6}</p>
-    </section>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <h2 class="project-title">3D Campus Safety Project Lead – University of Manchester</h2>
+                <p class="project-desc">
+                    Led a team to create a 3D virtual walkthrough of university fire exits, improving campus safety awareness. Managed footage capture and editing using specialist 3D cameras and editing tools. Delegated roles within the team and ensured all project milestones were delivered on time.
+                </p>
+                <button class="project-btn">View Project</button>
+            </div>
 
-    <section class="project">
-      <h2>3. Problem-Solving Page (this website) — Design concept</h2>
-      <p><strong>Role:</strong> Lead designer & developer.</p>
-      <p><strong>Problem:</strong> A local restaurant needs an online presence to improve bookings, customer engagement and modern communications.</p>
-      <p><strong>Design concept & structure:</strong> I made the Problem-Solving page to be modular: clear business context, contact details, social integration, and an interactive form that generates a prefilled email sending booking/feedback details to the restaurant. This structure keeps the site lightweight (no server required), is accessible (mailto fallback), and can be extended to integrate with booking APIs later. The page demonstrates hand-coded HTML/CSS/JS skills and immediate business value (streamlining enquiries & bookings without a database).</p>
-      <p><em>Why this matters:</em> Many small businesses need fast wins — an email generator/form plus clear social links increases conversions quickly while avoiding heavy backend development.</p>
-    </section>
-  </main>
+        </section>
+    </main>
 
-  <footer class="site-footer">
-    <p>© <span id="year-4"></span> Courtney Arnold-Harrison</p>
-  </footer>
+    <img src="assets/images/floating.gif" alt="Decorative floating GIF" class="floating-gif" />
+
+    <footer class="footer-note">
+        <p>Please note this portfolio was written in 2025 during second year of university and experiences/work experience/qualifications may need updating since then.</p>
+    </footer>
 </body>
 </html>
+
