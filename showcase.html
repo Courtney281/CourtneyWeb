@@ -5,33 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Showcase — Courtney Arnold-Harrison Portfolio</title>
 <link rel="stylesheet" href="assets/style.css">
-<style>
-/* Flip card container and inner */
-.flip-container { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 1rem; margin-top: 1rem; }
-.flip-card { perspective: 1000px; cursor: pointer; }
-.flip-card-inner { position: relative; width: 100%; height: 220px; transition: transform 0.6s; transform-style: preserve-3d; }
-.flip-card-inner.flipped { transform: rotateY(180deg); }
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 12px;
-  backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 12px;
-}
-.flip-card-front { background: var(--card); }
-.flip-card-back { background: var(--card); transform: rotateY(180deg); }
-.project-logo { max-height: 50px; margin-bottom: 8px; object-fit: contain; }
-</style>
 </head>
 <body>
 
 <header class="header">
-  <div class="brand" style="display:flex;align-items:center;">
+  <div class="brand">
     <h1>Project Showcase</h1>
   </div>
   <nav class="nav">
@@ -46,37 +24,37 @@
 
 <main class="container">
 
-  <section class="flip-container">
+  <section class="grid grid-2">
 
-    <!-- Project 1 -->
-    <div class="flip-card">
+    <!-- Project 1: Administrative Intern -->
+    <div class="card flip-card">
       <div class="flip-card-inner">
-        <div class="flip-card-front card">
-          <img class="project-logo" src="https://www.civilsociety.co.uk/static/3d280371-2448-4fd0-b62ca6e305594669/article_img_detail_5ba532e110cf7bcee7b0d6e49c027c8b_4a7c7e45a350/Age-UK-logo440x285.png" alt="Age UK Logo">
-          <h3>Administrative Intern — Age UK Stockport</h3>
-          <p>Jan – Jun 2023</p>
+        <div class="flip-card-front">
+          <h2>Administrative Intern</h2>
+          <p>Age UK Stockport | Jan – June 2023</p>
+          <p>Click to view details</p>
         </div>
-        <div class="flip-card-back card">
-          <h3>Administrative Intern — Age UK Stockport</h3>
+        <div class="flip-card-back">
+          <h2>Administrative Intern</h2>
           <ul>
-            <li>Developed an interactive "Annual Figures Dashboard" for real-time reporting.</li>
+            <li>Developed interactive "Annual Figures Dashboard" for real-time reporting.</li>
             <li>Supported digital hub operations by setting up IT equipment.</li>
-            <li>Analysed financial data to forecast future expenditure based on historical trends.</li>
+            <li>Analysed financial data to forecast future expenditure based on trends.</li>
           </ul>
         </div>
       </div>
     </div>
 
-    <!-- Project 2 -->
-    <div class="flip-card">
+    <!-- Project 2: 3D Campus Safety Project Lead -->
+    <div class="card flip-card">
       <div class="flip-card-inner">
-        <div class="flip-card-front card">
-          <img class="project-logo" src="https://sciencecouncil.org/web/wp-content/uploads/2017/01/University-of-Manchester.jpg" alt="University of Manchester Logo">
-          <h3>3D Campus Safety Project Lead — University of Manchester</h3>
-          <p>Work Experience</p>
+        <div class="flip-card-front">
+          <h2>3D Campus Safety Project Lead</h2>
+          <p>University of Manchester | Work Experience</p>
+          <p>Click to view details</p>
         </div>
-        <div class="flip-card-back card">
-          <h3>3D Campus Safety Project Lead — University of Manchester</h3>
+        <div class="flip-card-back">
+          <h2>3D Campus Safety Project Lead</h2>
           <ul>
             <li>Led a team to create a 3D virtual walkthrough of university fire exits.</li>
             <li>Operated and edited footage using specialist 3D camera and editing tools.</li>
@@ -97,21 +75,15 @@
   <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyOGRqd2Y1bDU4ZTNyOWV1NHZ1bjd0emlpbGE3bzl0bmpnNnk2ZDJxZCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/hmSXoiieHQX6Ix0AdW/giphy.gif" style="height:40px;">
 </div>
 
-<footer class="footer">Portfolio written in 2025 — experiences and skills may need updating since then.</footer>
+<footer class="footer">
+  Please note this portfolio was written in 2025 during second year of university and experiences/work experience/qualifications may need updating since then.
+</footer>
 
 <script src="assets/theme.js"></script>
-<script>
-// Flip card interaction
-document.querySelectorAll('.flip-card-inner').forEach(card => {
-  card.addEventListener('click', () => {
-    card.classList.toggle('flipped');
-  });
-});
-</script>
+<script src="assets/main.js"></script>
 
 </body>
 </html>
-
 
 
 
