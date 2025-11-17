@@ -1,48 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Showcase — Courtney Arnold-Harrison Portfolio</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+/* Flip card container and inner */
+.flip-container { display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 1rem; margin-top: 1rem; }
+.flip-card { perspective: 1000px; cursor: pointer; }
+.flip-card-inner { position: relative; width: 100%; height: 220px; transition: transform 0.6s; transform-style: preserve-3d; }
+.flip-card-inner.flipped { transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+.flip-card-front { background: var(--card); }
+.flip-card-back { background: var(--card); transform: rotateY(180deg); }
+.project-logo { max-height: 50px; margin-bottom: 8px; object-fit: contain; }
+</style>
+</head>
+<body>
 
-
-<div class="header-right">
+<header class="header">
+  <div class="brand" style="display:flex;align-items:center;">
+    <h1>Project Showcase</h1>
+  </div>
   <nav class="nav">
     <a href="index.html">Home</a>
     <a href="skills.html">Skills</a>
     <a href="showcase.html">Showcase</a>
     <a href="problem-solving.html">Problem-Solving</a>
     <a href="contact.html">Contact</a>
+    <button class="btn" id="theme-toggle">🌙 / ☀️</button>
   </nav>
-  <button id="theme-toggle" class="theme-toggle">☾</button>
+</header>
+
+<main class="container">
+
+  <section class="flip-container">
+
+    <!-- Project 1 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front card">
+          <img class="project-logo" src="https://www.civilsociety.co.uk/static/3d280371-2448-4fd0-b62ca6e305594669/article_img_detail_5ba532e110cf7bcee7b0d6e49c027c8b_4a7c7e45a350/Age-UK-logo440x285.png" alt="Age UK Logo">
+          <h3>Administrative Intern — Age UK Stockport</h3>
+          <p>Jan – Jun 2023</p>
+        </div>
+        <div class="flip-card-back card">
+          <h3>Administrative Intern — Age UK Stockport</h3>
+          <ul>
+            <li>Developed an interactive "Annual Figures Dashboard" for real-time reporting.</li>
+            <li>Supported digital hub operations by setting up IT equipment.</li>
+            <li>Analysed financial data to forecast future expenditure based on historical trends.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front card">
+          <img class="project-logo" src="https://sciencecouncil.org/web/wp-content/uploads/2017/01/University-of-Manchester.jpg" alt="University of Manchester Logo">
+          <h3>3D Campus Safety Project Lead — University of Manchester</h3>
+          <p>Work Experience</p>
+        </div>
+        <div class="flip-card-back card">
+          <h3>3D Campus Safety Project Lead — University of Manchester</h3>
+          <ul>
+            <li>Led a team to create a 3D virtual walkthrough of university fire exits.</li>
+            <li>Operated and edited footage using specialist 3D camera and editing tools.</li>
+            <li>Delegated team roles and ensured timely delivery of project milestones.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- Floating GIF at bottom duplicated to fill width -->
+<div style="position: fixed; bottom:0; left:0; width:100%; display:flex; justify-content:center; gap:0;">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyOGRqd2Y1bDU4ZTNyOWV1NHZ1bjd0emlpbGE3bzl0bmpnNnk2ZDJxZCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/hmSXoiieHQX6Ix0AdW/giphy.gif" style="height:40px;">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyOGRqd2Y1bDU4ZTNyOWV1NHZ1bjd0emlpbGE3bzl0bmpnNnk2ZDJxZCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/hmSXoiieHQX6Ix0AdW/giphy.gif" style="height:40px;">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyOGRqd2Y1bDU4ZTNyOWV1NHZ1bjd0emlpbGE3bzl0bmpnNnk2ZDJxZCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/hmSXoiieHQX6Ix0AdW/giphy.gif" style="height:40px;">
 </div>
 
+<footer class="footer">Portfolio written in 2025 — experiences and skills may need updating since then.</footer>
 
-<!-- Project / Experience Card 1 -->  
-<div class="card project-card">  
-  <div style="display: flex; align-items: center; gap: 12px;">  
-    <img src="https://www.civilsociety.co.uk/static/3d280371-2448-4fd0-b62ca6e305594669/article_img_detail_5ba532e110cf7bcee7b0d6e49c027c8b_4a7c7e45a350/Age-UK-logo440x285.png" 
-         alt="Age UK logo" style="height:50px; width:auto; object-fit: contain;">  
-    <h2 class="project-title">Administrative Intern – Age UK Stockport</h2>  
-  </div>  
-  <p><strong>Role:</strong> Administrative Intern</p>  
-  <p><strong>Work Experience:</strong></p>  
-  <ul>  
-    <li>Developed an interactive “Annual Figures Dashboard” used for real-time reporting and strategic planning.</li>  
-    <li>Supported digital hub operations by setting up IT equipment.</li>  
-    <li>Analysed financial data to forecast future expenditure based on historical trends.</li>  
-  </ul>  
-</div>  
+<script src="assets/theme.js"></script>
+<script>
+// Flip card interaction
+document.querySelectorAll('.flip-card-inner').forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('flipped');
+  });
+});
+</script>
 
-<!-- Project / Experience Card 2 -->  
-<div class="card project-card">  
-  <div style="display: flex; align-items: center; gap: 12px;">  
-    <img src="https://sciencecouncil.org/web/wp-content/uploads/2017/01/University-of-Manchester.jpg" 
-         alt="University of Manchester logo" style="height:50px; width:auto; object-fit: contain;">  
-    <h2 class="project-title">3D Campus Safety Project Lead – University of Manchester</h2>  
-  </div>  
-  <p><strong>Role:</strong> Project Lead</p>  
-  <p><strong>Work Experience:</strong></p>  
-  <ul>  
-    <li>Led a team to create a 3D virtual walkthrough of university fire exits.</li>  
-    <li>Operated and edited footage using specialist 3D cameras and editing tools.</li>  
-    <li>Delegated team roles and ensured timely delivery of project milestones.</li>  
-  </ul>  
-</div>  
+</body>
+</html>
+
 
 
 
