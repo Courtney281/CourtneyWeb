@@ -1,85 +1,96 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Skills — Courtney Arnold-Harrison Portfolio</title>
-<link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8">
+  <title>Skills — Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body class="dark-mode">
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <h1>Skills & Qualifications</h1>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="showcase.html">Showcase</a>
+        <a href="problem-solving.html">Problem-Solving</a>
+        <a href="contact.html">Contact</a>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+      </nav>
+    </header>
 
-<header class="header">
-  <div class="brand">
-    <h1>Skills & Qualifications</h1>
+    <!-- Certificates Table -->
+    <main>
+      <h2>Certificates & Diplomas</h2>
+      <table class="table" aria-describedby="certs-desc">
+        <caption id="certs-desc" style="caption-side:top;font-weight:700;margin-bottom:8px">Relevant qualifications</caption>
+        <thead>
+          <tr><th>Year</th><th>Qualification</th><th>Institution</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>2023</td><td>Diploma in Web Development</td><td>Local College</td></tr>
+          <tr><td>2022</td><td>UX Fundamentals Certificate</td><td>Online Academy</td></tr>
+          <tr><td>2021</td><td>Food Safety Level 2</td><td>City Training</td></tr>
+        </tbody>
+      </table>
+
+      <!-- Core Skills Cards -->
+      <h2 style="margin-top:24px">Core Skills</h2>
+      <div class="grid grid-3">
+        <div class="flip-card card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Data Analysis & Reporting</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Proficient in Excel and Power BI for analysing datasets, creating dashboards, and generating actionable insights. Ability to interpret trends and support decision-making processes.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Problem Solving & Process Improvement</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Strong analytical mindset with experience identifying bottlenecks, streamlining workflows, and proposing practical solutions for business operations.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Digital & Office Tools</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Skilled with Microsoft Office suite, collaborative tools, and communication platforms for project tracking and team collaboration.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Work Experience -->
+      <h2 style="margin-top:24px">Work Experience</h2>
+      <ul>
+        <li><strong>CTO — Local Restaurant (2024–present)</strong>: Leading digital transformation initiatives, responsible for web presence and booking tools.</li>
+        <li><strong>Front-end Developer — Web Agency (2019–2023)</strong>: Built websites and internal tools for SME clients.</li>
+      </ul>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      Portfolio created in 2025 during second year of university; skills and experience may require updates.
+    </footer>
   </div>
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="skills.html">Skills</a>
-    <a href="showcase.html">Showcase</a>
-    <a href="problem-solving.html">Problem-Solving</a>
-    <a href="contact.html">Contact</a>
-    <button class="btn" id="theme-toggle">🌙 / ☀️</button>
-  </nav>
-</header>
 
-<main class="container">
-
-  <section class="grid grid-2">
-    <!-- Card 1: Technical Tools -->
-    <div class="card flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <h2>Technical Tools</h2>
-          <p>Click to view details</p>
-        </div>
-        <div class="flip-card-back">
-          <h2>Technical Tools</h2>
-          <ul>
-            <li>Microsoft Excel – Advanced spreadsheets, pivot tables, data analysis</li>
-            <li>Power BI – Data visualizations, dashboards, reporting</li>
-            <li>SQL Basics – Querying databases for reporting</li>
-            <li>Tableau (Optional) – Interactive dashboards</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 2: Workplace Skills -->
-    <div class="card flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <h2>Workplace Skills</h2>
-          <p>Click to view details</p>
-        </div>
-        <div class="flip-card-back">
-          <h2>Workplace Skills</h2>
-          <ul>
-            <li>Team Leadership – Delegating tasks and managing small teams</li>
-            <li>Project Planning – Milestone tracking and timely delivery</li>
-            <li>Communication – Professional email and presentation skills</li>
-            <li>Problem-Solving – Identifying bottlenecks and providing solutions</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-</main>
-
-<!-- Floating GIF at bottom duplicated to fill width -->
-<div style="position: fixed; bottom:0; left:0; width:100%; display:flex; justify-content:center; gap:0;">
-  <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyOGRqd2Y1bDU4ZTNyOWV1NHZ1bjd0emlpbGE3bzl0bmpnNnk2ZDJxZCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/hmSXoiieHQX6Ix0AdW/giphy.gif" style="height:40px;">
-  <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyOGRqd2Y1bDU4ZTNyOWV1NHZ1bjd0emlpbGE3bzl0bmpnNnk2ZDJxZCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/hmSXoiieHQX6Ix0AdW/giphy.gif" style="height:40px;">
-  <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyOGRqd2Y1bDU4ZTNyOWV1NHZ1bjd0emlpbGE3bzl0bmpnNnk2ZDJxZCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/hmSXoiieHQX6Ix0AdW/giphy.gif" style="height:40px;">
-</div>
-
-<footer class="footer">
-  Please note this portfolio was written in 2025 during second year of university and experiences/work experience/qualifications may need updating since then.
-</footer>
-
-<script src="assets/theme.js"></script>
-<script src="assets/main.js"></script>
-
+  <script src="assets/theme.js"></script>
+  <script src="assets/main.js"></script>
+  <script src="assets/scripts.js"></script>
 </body>
 </html>
