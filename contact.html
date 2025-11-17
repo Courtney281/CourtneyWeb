@@ -1,47 +1,87 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me </title>
-    <link rel="stylesheet" href="assets/style.css">
-    <script defer src="assets/script.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact — Courtney Arnold-Harrison Portfolio</title>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <header class="header">
-        <h1 class="page-title">Contact</h1>
-       <div class="header-right">
+
+<header class="header">
+  <div class="brand">
+    <h1>Contact Me</h1>
+  </div>
   <nav class="nav">
     <a href="index.html">Home</a>
     <a href="skills.html">Skills</a>
     <a href="showcase.html">Showcase</a>
     <a href="problem-solving.html">Problem-Solving</a>
     <a href="contact.html">Contact</a>
+    <button class="btn" id="theme-toggle">🌙 / ☀️</button>
   </nav>
-  <button id="theme-toggle" class="theme-toggle">☾</button>
+</header>
+
+<main class="container">
+
+  <section class="card">
+    <h2>Get in Touch</h2>
+    <p>If you would like to reach out, feel free to email me at: 
+      <a href="mailto:c.n.arnold-harrison@edu.salford.ac.uk" class="badge">c.n.arnold-harrison@edu.salford.ac.uk</a>
+    </p>
+
+    <h3>Phone</h3>
+    <p>07498819517</p>
+
+    <h3>LinkedIn</h3>
+    <p>
+      <a href="https://www.linkedin.com/in/courtney-arnold-harrison-590bb3263" target="_blank" rel="noopener">View my LinkedIn profile</a>
+    </p>
+
+    <h3>Message Me</h3>
+    <form id="contact-form" action="mailto:c.n.arnold-harrison@edu.salford.ac.uk" method="post" enctype="text/plain" class="card" style="margin-top:12px">
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input id="name" name="name" placeholder="Full name" required>
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" placeholder="you@example.com" required>
+      </div>
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center;margin-top:12px;">
+        <button class="btn" type="submit">Send Message</button>
+        <button class="btn btn-secondary" type="reset">Reset</button>
+        <div id="contact-status" style="color:var(--muted);font-size:14px"></div>
+      </div>
+    </form>
+
+    <p style="margin-top:12px;color:var(--muted)">
+      Technical note: JavaScript composes a mailto: URL with the form data to open the user's email client. The HTML action provides a fallback for non-JS environments.
+    </p>
+  </section>
+
+</main>
+
+<!-- Floating GIF at bottom duplicated to fill width -->
+<div style="position: fixed; bottom:0; left:0; width:100%; display:flex; justify-content:center; gap:0;">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyOGRqd2Y1bDU4ZTNyOWV1NHZ1bjd0emlpbGE3bzl0bmpnNnk2ZDJxZCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/hmSXoiieHQX6Ix0AdW/giphy.gif" style="height:40px;">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyOGRqd2Y1bDU4ZTNyOWV1NHZ1bjd0emlpbGE3bzl0bmpnNnk2ZDJxZCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/hmSXoiieHQX6Ix0AdW/giphy.gif" style="height:40px;">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyOGRqd2Y1bDU4ZTNyOWV1NHZ1bjd0emlpbGE3bzl0bmpnNnk2ZDJxZCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/hmSXoiieHQX6Ix0AdW/giphy.gif" style="height:40px;">
 </div>
 
-    </header>
+<footer class="footer">
+  Please note this portfolio was written in 2025 during second year of university and experiences/work experience/qualifications may need updating since then.
+</footer>
 
-    <main class="container card">
-        <h2>Get in touch</h2>
-        <p>Email for assessment: <a href="mailto:c.n.arnold-harrison@edu.salford.ac.uk" class="badge">c.n.arnold-harrison@edu.salford.ac.uk</a></p>
+<script src="assets/theme.js"></script>
+<script src="assets/main.js"></script>
 
-        <h3>Follow / Social</h3>
-        <div class="social-list">
-            <a href="https://www.linkedin.com/in/courtney-arnold-harrison-590bb3263" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
-
-        <h3 style="margin-top:16px">Contact details (restaurant)</h3>
-        <p>Restaurant name: The Local Kitchen</p>
-        <p>Phone: 07498819517</p>
-        <p>Email: <a href="mailto:c.n.arnold-harrison@edu.salford.ac.uk">c.n.arnold-harrison@edu.salford.ac.uk</a></p>
-    </main>
-
-    <footer class="footer-note">
-        <p>Please note this portfolio was written in 2025 during second year of university and experiences/work experience/qualifications may need updating since then.</p>
-    </footer>
 </body>
 </html>
+
 
 
