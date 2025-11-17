@@ -45,3 +45,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+// Theme toggle - works site-wide
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.getElementById("theme-toggle");
+  const htmlEl = document.documentElement;
+
+  // Load saved theme from localStorage
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  htmlEl.setAttribute("data-theme", savedTheme);
+  toggle.textContent = savedTheme === "dark" ? "☾" : "☀";
+
+  toggle.addEventListener("click", () => {
+    const currentTheme = htmlEl.getAttribute("data-theme");
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+    htmlEl.setAttribute("data-theme", newTheme);
+    toggle.textContent = newTheme === "dark" ? "☾" : "☀";
+    localStorage.setItem("theme", newTheme);
+  });
+});
+
+
