@@ -1,2 +1,32 @@
+# Auto-detect text files and normalize line endings
+* text=auto
+
+# HTML, CSS, JS files: treat as text with LF endings
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+
+# Markdown and text files
+*.md text
+*.txt text
+
+# Images and other binary assets
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+
+# Fonts (if added)
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+
+# Ignore OS-specific files
+*.DS_Store binary
+*.Thumbs.db binary
+
+# Optional: treat SVGs as text for easier diffing
+*.svg text
 # Auto detect text files and perform LF normalization
 * text=auto
