@@ -1,48 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Home — Courtney Arnold-Harrison Portfolio</title>
-<link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8">
+  <title>Home — Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body class="dark-mode">
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <img src="https://cdn.theuniguide.co.uk/uploads/image/file/11329/University_of_Salford.png" alt="Headshot" class="headshot">
+        <div>
+          <h1>Courtney Arnold-Harrison</h1>
+          <p class="subtitle">Second year student at the University of Salford, currently studying Business management with innovation and technology.</p>
+        </div>
+      </div>
 
-<header class="header">
-  <div class="brand" style="display:flex;align-items:center;">
-    <img src="https://cdn.theuniguide.co.uk/uploads/image/file/11329/University_of_Salford.png" alt="Headshot">
-    <div>
-      <h1>Courtney Arnold-Harrison</h1>
-      <p>Second year student at the University of Salford, currently studying Business Management with Innovation and Technology.</p>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="skills.html">Skills</a>
+        <a href="showcase.html">Showcase</a>
+        <a href="problem-solving.html">Problem-Solving</a>
+        <a href="contact.html">Contact</a>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+          🌙
+        </button>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero card">
+      <div class="hero-text">
+        <p>Hi! I am an aspiring Data Analyst and this website is going to show you an insight into the technical and workplace skills I have gained so far amongst my career and educational journey.</p>
+        <div class="buttons">
+          <a href="showcase.html" class="btn">View my Projects</a>
+          <a href="skills.html" class="btn">View my Skills</a>
+          <a href="contact.html" class="btn">Contact me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      Please note this portfolio was written in 2025 during second year of university and experiences/work experience/qualifications may need updating since then.
+    </footer>
+
+    <!-- Floating GIF at bottom center -->
+    <div class="floating-footer">
+      <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyOGRqd2Y1bDU4ZTNyOWV1NHZ1bjd0emlpbGE3bzl0bmpnNnk2ZDJxZCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/hmSXoiieHQX6Ix0AdW/giphy.gif" alt="Floating GIF">
     </div>
   </div>
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="skills.html">Skills</a>
-    <a href="showcase.html">Showcase</a>
-    <a href="problem-solving.html">Problem-Solving</a>
-    <a href="contact.html">Contact</a>
-    <button class="btn" id="theme-toggle">🌙 / ☀️</button>
-  </nav>
-</header>
 
-<main class="container">
-  <section class="card" style="text-align:center;">
-    <p>Hi! I am an aspiring Data Analyst and this website is going to show you an insight into the technical and workplace skills I have gained so far amongst my career and educational journey.</p>
-    <div style="margin-top:12px;">
-      <a href="showcase.html" class="btn">View my projects</a>
-      <a href="skills.html" class="btn">View my skills</a>
-      <a href="contact.html" class="btn">Contact me</a>
-    </div>
-  </section>
-</main>
-
-<img class="floating-gif" src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyOGRqd2Y1bDU4ZTNyOWV1NHZ1bjd0emlpbGE3bzl0bmpnNnk2ZDJxZCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/hmSXoiieHQX6Ix0AdW/giphy.gif" alt="floating GIF">
-
-<footer class="footer">
-  Please note this portfolio was written in 2025 during second year of university and experiences/work experience/qualifications may need updating since then.
-</footer>
-
-<script src="assets/theme.js"></script>
+  <script src="assets/theme.js"></script>
+  <script src="assets/main.js"></script>
+  <script src="assets/scripts.js"></script>
 </body>
 </html>
