@@ -1,69 +1,102 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills — Courtney Arnold-Harrison</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <script defer src="assets/script.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skills — Courtney Arnold-Harrison Portfolio</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+/* additional styles for flip cards */
+.flip-container { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 1rem; margin-top: 1rem; }
+</style>
 </head>
 <body>
-    <header class="header">
-        <div class="brand">
-            <h1>Skills & Strengths</h1>
-        </div>
-       <div class="header-right">
+
+<header class="header">
+  <div class="brand" style="display:flex;align-items:center;">
+    <h1>Skills & Strengths</h1>
+  </div>
   <nav class="nav">
     <a href="index.html">Home</a>
     <a href="skills.html">Skills</a>
     <a href="showcase.html">Showcase</a>
     <a href="problem-solving.html">Problem-Solving</a>
     <a href="contact.html">Contact</a>
+    <button class="btn" id="theme-toggle">🌙 / ☀️</button>
   </nav>
-  <button id="theme-toggle" class="theme-toggle">☾</button>
+</header>
+
+<main class="container">
+
+  <section class="flip-container">
+
+    <!-- Flip Card 1: Technical Tools -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front card">
+          <h3>Technical Tools</h3>
+          <p>Excel, Power BI</p>
+        </div>
+        <div class="flip-card-back card">
+          <h3>Technical Tools</h3>
+          <p>Developed interactive dashboards and reporting tools using Excel and Power BI. Built visual analytics for forecasting and data presentation.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flip Card 2: Data Analysis -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front card">
+          <h3>Data Analysis</h3>
+          <p>Business & quantitative analysis</p>
+        </div>
+        <div class="flip-card-back card">
+          <h3>Data Analysis</h3>
+          <p>Performed structured analysis of datasets to identify trends, inform decision-making, and support strategic planning. Experience in preparing reports for stakeholders.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Flip Card 3: Communication & Organisation -->
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front card">
+          <h3>Communication & Organisation</h3>
+          <p>Teamwork, presenting & time management</p>
+        </div>
+        <div class="flip-card-back card">
+          <h3>Communication & Organisation</h3>
+          <p>Led teams in project work, delegated tasks, and maintained clear communication channels. Skilled at reporting, presenting findings, and managing deadlines efficiently.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- Floating GIF at bottom duplicated to fill width -->
+<div style="position: fixed; bottom:0; left:0; width:100%; display:flex; justify-content:center; gap:0;">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyOGRqd2Y1bDU4ZTNyOWV1NHZ1bjd0emlpbGE3bzl0bmpnNnk2ZDJxZCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/hmSXoiieHQX6Ix0AdW/giphy.gif" style="height:40px;">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyOGRqd2Y1bDU4ZTNyOWV1NHZ1bjd0emlpbGE3bzl0bmpnNnk2ZDJxZCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/hmSXoiieHQX6Ix0AdW/giphy.gif" style="height:40px;">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyOGRqd2Y1bDU4ZTNyOWV1NHZ1bjd0emlpbGE3bzl0bmpnNnk2ZDJxZCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/hmSXoiieHQX6Ix0AdW/giphy.gif" style="height:40px;">
 </div>
 
-    </header>
+<footer class="footer">Portfolio written in 2025 — experiences and skills may need updating since then.</footer>
 
-    <main class="container">
-        <section class="grid" style="gap:20px; margin-top:20px;">
-            <!-- Technical Tools & Software -->
-            <div class="card">
-                <h2>Technical Tools & Software</h2>
-                <p>Proficient in <strong>Excel</strong> for advanced data analysis, including pivot tables, charts, and conditional formatting.</p>
-                <p>Skilled in <strong>Power BI</strong> to create interactive dashboards, reports, and data visualizations for decision-making.</p>
-                <p>Comfortable importing, cleaning, and connecting datasets to generate actionable insights.</p>
-                <button class="btn">Learn More</button>
-            </div>
+<script src="assets/theme.js"></script>
+<script>
+// Flip card interaction
+document.querySelectorAll('.flip-card-inner').forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('flipped');
+  });
+});
+</script>
 
-            <!-- Analytical Skills -->
-            <div class="card">
-                <h2>Analytical Skills</h2>
-                <p>Strong capability in <strong>data interpretation and problem-solving</strong>, identifying trends and anomalies in datasets.</p>
-                <p>Experienced in producing <strong>visual and written reports</strong> to communicate findings effectively to both technical and non-technical audiences.</p>
-                <p>Confident in applying logical and structured approaches to support evidence-based decision-making.</p>
-                <button class="btn">Learn More</button>
-            </div>
-
-            <!-- Workplace Skills -->
-            <div class="card">
-                <h2>Workplace Skills</h2>
-                <p>Demonstrated <strong>teamwork and collaboration</strong>, leading group tasks and contributing to joint problem-solving.</p>
-                <p>Strong <strong>communication skills</strong>, presenting ideas clearly and adapting messaging for different audiences.</p>
-                <p>Effective <strong>time management and organization</strong>, prioritizing tasks to meet deadlines in academic and work-based projects.</p>
-                <button class="btn">Learn More</button>
-            </div>
-        </section>
-
-        <!-- Floating GIF at the bottom -->
-        <img src="https://media4.giphy.com/media/v1.Y2lkPTZjMDliOTUyOGRqd2Y1bDU4ZTNyOWV1NHZ1bjd0emlpbGE3bzl0bmpnNnk2ZDJxZCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/hmSXoiieHQX6Ix0AdW/giphy.gif" 
-             alt="Decorative floating GIF" class="floating-gif">
-
-        <footer class="footer-note">
-            <p>Please note this portfolio was written in 2025 during second year of university and experiences/work experience/qualifications may need updating since then.</p>
-        </footer>
-    </main>
 </body>
 </html>
+
 
 
