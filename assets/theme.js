@@ -1,21 +1,18 @@
-// THEME.JS — Handles dark/light mode toggle
+// theme.js - handles dark/light mode toggle with sun/moon
 
 document.addEventListener('DOMContentLoaded', () => {
   const toggleBtn = document.getElementById('theme-toggle');
   const body = document.body;
 
-  // check localStorage for saved theme
-  if(localStorage.getItem('theme') === 'light'){
-    body.classList.add('light-mode');
-  }
+  // Load saved theme from localStorage
+  const savedTheme = localStorage.getItem('theme');
+  if(savedTheme === 'light') body.classList.add('light-mode');
 
   toggleBtn.addEventListener('click', () => {
     body.classList.toggle('light-mode');
-    if(body.classList.contains('light-mode')){
-      localStorage.setItem('theme', 'light');
-    } else {
-      localStorage.setItem('theme', 'dark');
-    }
+    const mode = body.classList.contains('light-mode') ? 'light' : 'dark';
+    localStorage.setItem('theme', mode);
   });
 });
+
 
