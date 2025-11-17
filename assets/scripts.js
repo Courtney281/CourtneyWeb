@@ -1,52 +1,47 @@
-// Basic interactive helpers
-document.addEventListener('DOMContentLoaded', function(){
-  // Year placeholders
-  const years = [ 'year', 'year-2','year-3','year-4','year-5'];
-  years.forEach(id => {
-    const el = document.getElementById(id);
-    if(el) el.textContent = new Date().getFullYear();
-  });
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const htmlEl = document.documentElement;
 
-  // "Download CV" button behaviour (link to PDF or DOCX in repo)
-  const dl = document.getElementById('download-cv');
-  if(dl){
-    dl.addEventListener('click', function(){
-      // Update the path to your actual CV file in the repo (e.g., assets/Courtney_CV.pdf)
-      const cvPath = 'assets/Courtney_Arnold-Harrison_CV.pdf';
-      // try to open
-      window.open(cvPath, '_blank');
+    // Load saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if(savedTheme) htmlEl.setAttribute('data-theme', savedTheme);
+
+    // Update toggle icon
+    updateToggleIcon();
+
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = htmlEl.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        htmlEl.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateToggleIcon();
     });
-  }
+
+    function updateToggleIcon() {
+        const currentTheme = htmlEl.getAttribute('data-theme');
+        themeToggle.textContent = currentTheme === 'dark' ? '☾' : '☀';
+    }
+
+    // Ripple effect for buttons
+    document.querySelectorAll('.btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const circle = document.createElement('span');
+            circle.style.position = 'absolute';
+            circle.style.width = circle.style.height = '10px';
+            circle.style.background = 'rgba(255,255,255,0.3)';
+            circle.style.borderRadius = '50%';
+            circle.style.left = (e.offsetX - 5) + 'px';
+            circle.style.top = (e.offsetY - 5) + 'px';
+            circle.style.pointerEvents = 'none';
+            circle.style.transition = 'transform 0.6s ease, opacity 0.6s ease';
+            circle.style.transform = 'scale(1)';
+            circle.style.opacity = '1';
+            circle.className = 'ripple';
+            btn.style.position = 'relative';
+            btn.appendChild(circle);
+            setTimeout(()=>{ circle.style.transform='scale(20)'; circle.style.opacity='0'; }, 20);
+            setTimeout(()=>{ circle.remove(); }, 700);
+        });
+    });
 });
-
-// Form handler for problem-solving page.
-// This builds a mailto: link that pre-fills subject and body, then opens the user's mail client.
-function handleFormSubmit(e){
-  e.preventDefault();
-  const form = e.target;
-  const name = encodeURIComponent(form.name.value.trim());
-  const userEmail = encodeURIComponent(form.email.value.trim());
-  const type = encodeURIComponent(form.type.value);
-  const date = encodeURIComponent(form.date.value.trim());
-  const notes = encodeURIComponent(form.notes.value.trim());
-
-  const to = 'restaurant@example.com'; // replace with actual restaurant email
-  const subject = encodeURIComponent(`[Website Enquiry] ${type} — ${name}`);
-  const bodyLines = [
-    `Name: ${decodeURIComponent(name)}`,
-    `Contact email: ${decodeURIComponent(userEmail)}`,
-    `Request type: ${decodeURIComponent(type)}`,
-    `Preferred date/time: ${decodeURIComponent(date)}`,
-    `Details: ${decodeURIComponent(notes)}`,
-    '',
-    '---',
-    'Sent via website enquiry form'
-  ];
-  const body = encodeURIComponent(bodyLines.join('\n'));
-
-  const mailto = `mailto:${to}?subject=${subject}&body=${body}`;
-  // open mail client
-  window.location.href = mailto;
-  return false;
-}
 
