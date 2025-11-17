@@ -1,14 +1,52 @@
-/* Root variables for dark mode (default) */
+/* Default variables (dark mode) */
 :root {
-  --bg: #000000;
-  --text: #ffffff;
-  --heading: #ffb6c1; /* light pink for headings in dark mode */
-  --accent: #ff99b3;  /* soft pink for buttons */
-  --accent-border: #ff6699; /* darker pink border for buttons */
-  --muted: #cccccc;
-  --max-width: 1100px;
-  --radius: 12px;
-  --font: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --bg-color: #111;         /* page background */
+    --card-bg: #1a1a1a;       /* card background */
+    --text-color: #fff;       /* paragraph / body text */
+    --heading-color: #ffc0cb; /* headings light pink */
+    --accent: #ff77aa;        /* button / link accent */
+    --button-bg: #ffc0cb;     /* buttons background */
+    --button-text: #111;      /* button text */
+    --button-border: #d6336c; /* button border */
+}
+
+/* Light mode variables */
+:root[data-theme="light"] {
+    --bg-color: #fff;         /* page background */
+    --card-bg: #fff;          /* card background */
+    --text-color: #111;       /* paragraph / body text */
+    --heading-color: #d6336c; /* headings dark pink */
+    --accent: #ff77aa;        /* button / link accent (same for readability) */
+    --button-bg: #ffc0cb;     /* buttons background */
+    --button-text: #111;      /* button text */
+    --button-border: #d6336c; /* button border */
+}
+
+/* Apply variables */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card, .project-card {
+    background-color: var(--card-bg);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4 {
+    color: var(--heading-color);
+}
+
+.btn {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: 2px solid var(--button-border);
+    transition: all 0.2s ease;
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
 [data-theme="light"] {
