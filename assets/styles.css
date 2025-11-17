@@ -149,4 +149,38 @@ h1,h2,h3,h4 { color: var(--heading); margin-bottom: 0.6rem; }
     object-fit: contain;
     margin-bottom: 8px; /* space below logo */
 }
+/* Project card styling */
+.project-card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+}
+
+.project-card h2.project-title {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--heading-color);
+}
+
+/* Dark mode colors */
+:root[data-theme="dark"] {
+    --card-bg: #111;
+    --text-color: #fff;
+    --heading-color: #ffc0cb; /* light pink */
+}
+
+/* Light mode colors */
+:root[data-theme="light"] {
+    --card-bg: #fff;
+    --text-color: #000;
+    --heading-color: #d6336c; /* darker pink */
+}
 
