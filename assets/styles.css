@@ -143,10 +143,10 @@ h1,h2,h3,h4 { color: var(--heading); margin-bottom: 0.6rem; }
   .nav { flex-wrap: wrap; }
 }
 
-/* Project card logos - consistent size */
 .project-card img {
     height: 50px;
     width: auto;
     object-fit: contain;
+    margin-bottom: 8px; /* space below logo */
 }
 
