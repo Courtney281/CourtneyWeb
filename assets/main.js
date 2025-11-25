@@ -57,6 +57,35 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 20);
 
       setTimeout(() => { circle.remove(); }, 700);
+
+      /* ================= Cookie Banner ================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cookieBanner = document.getElementById("cookie-banner");
+  const acceptBtn = document.getElementById("cookie-accept");
+  const rejectBtn = document.getElementById("cookie-reject");
+  const manageBtn = document.getElementById("cookie-manage");
+
+  // Show only if not previously set
+  if (!localStorage.getItem("cookieConsent")) {
+    cookieBanner.classList.remove("hidden");
+  }
+
+  acceptBtn.addEventListener("click", () => {
+    localStorage.setItem("cookieConsent", "accepted");
+    cookieBanner.classList.add("hidden");
+  });
+
+  rejectBtn.addEventListener("click", () => {
+    localStorage.setItem("cookieConsent", "rejected");
+    cookieBanner.classList.add("hidden");
+  });
+
+  manageBtn.addEventListener("click", () => {
+    alert("A full cookie-settings panel can be added later if you want!");
+  });
+});
+
     });
   });
 
